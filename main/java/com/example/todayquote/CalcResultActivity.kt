@@ -8,6 +8,13 @@ class CalcResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calc_result)
 
+        val num1 = intent.getIntExtra("num1",-1)
+        val num2 = intent.getIntExtra("num2",-1)
+        val op = intent.getStringExtra("op")
+
+        if(op=="+"){
+
+        }
 
 
     }

@@ -8,9 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils.indexOf
 import android.util.Log
-import android.widget.Button
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.*
+import com.example.todayquote.R.id.*
 import kotlin.random.Random
 
 
@@ -20,7 +19,32 @@ class MainActivity : AppCompatActivity() {
     //2023-05-23
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_calclnput)
+
+        val num1Text = findViewById<EditText>(R.id.num1)
+        val num2Text = findViewById<EditText>(R.id.num2)
+        val plusButton = findViewById<Button>(R.id.plus)
+        plusButton.setOnClickListener{
+            val num1Str = num1Text.text.toString()
+            val num2Str = num2Text.text.toString()
+            //공백문자를 넣는 것을 방지
+            if(num1Str.isNotBlank()&&num2Str.isNotBlank()){
+                val num1 = num1Text.text.toString().trim().toInt()
+                val num2 = num1Text.text.toString().trim().toInt()
+
+                val intent = Intent(this,CalcResultActivity::class.java)
+                intent.putExtra("num1",num1)
+                intent.putExtra("num2",num2)
+                intent.putExtra("op", "+")
+
+                startActivity(intent)
+            }else{
+                Toast.makeText(this,"잘못된 입력값",
+                Toast.LENGTH_SHORT).show()
+
+            }
+
+        }
 
     }
     /*
