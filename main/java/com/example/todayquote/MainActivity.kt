@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             //공백문자를 넣는 것을 방지
             if(num1Str.isNotBlank()&&num2Str.isNotBlank()){
                 val num1 = num1Text.text.toString().trim().toInt()
-                val num2 = num1Text.text.toString().trim().toInt()
+                val num2 = num2Text.text.toString().trim().toInt()
 
                 val intent = Intent(this,CalcResultActivity::class.java)
                 intent.putExtra("num1",num1)
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }else{
                 Toast.makeText(this,"잘못된 입력값",
-                Toast.LENGTH_SHORT).show()
+                    Toast.LENGTH_SHORT).show()
 
             }
 

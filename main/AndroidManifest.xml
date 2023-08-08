@@ -21,9 +21,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CalclnputActivity"
+            android:name=".CalcResultActivity"
             android:exported="true"
-            tools:ignore="DuplicateActivity" />
+            tools:ignore="DuplicateActivity">
+
+        </activity>
+
+
         <activity
             android:name=".QuoteListActivity"
             android:exported="false" />
