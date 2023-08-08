@@ -3,32 +3,32 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" >
 
     <TextView
-        android:id="@+id/quote_text"
-        android:text="대충 명언1"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id"
+        />
     <TextView
-        android:id="@+id/quote_from"
-        android:text="출처1"
-        android:gravity="right"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_title"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_description"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_discountPercentage"
+        />
     <Button
-        android:id="@+id/quote_edit"
-        android:text="명언편집"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/quote_list"
-        android:text="명언 보기"
+        android:id="@+id/search_repo_btn"
+        android:text="저장소 검색"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>
-
